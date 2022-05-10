@@ -1,0 +1,27 @@
+-- creación de usuarios
+CREATE USER 'rodrigo'@'localhost' IDENTIFIED BY 'DeliveryApp2022';
+CREATE USER 'sofia'@'localhost' IDENTIFIED BY 'DeliveryApp2022';
+
+-- control
+use mysql;
+select *
+from user;
+
+-- cambiar password
+ALTER USER 'sofia'@'localhost' IDENTIFIED BY 'Nuevapassword2022';
+
+-- renombrar
+RENAME USER  'sofia'@'localhost' TO 'sofia.gomez'@'localhost';
+
+-- ver permisos
+use mysql;
+SHOW GRANTS FOR 'sofia.gomez'@'localhost';
+
+-- otorgar permisos de solo lectura
+use mysql;
+GRANT SELECT ON *.* TO 'rodrigo'@'localhost';
+
+-- otorgar permisos de lectura, inserción y modificación de datos
+
+use mysql;
+GRANT SELECT, INSERT, UPDATE ON *.* TO 'sofia.gomez'@'localhost';
