@@ -19,9 +19,9 @@ SHOW GRANTS FOR 'sofia.gomez'@'localhost';
 
 -- otorgar permisos de solo lectura
 use mysql;
-GRANT SELECT ON *.* TO 'rodrigo'@'localhost';
+GRANT SELECT ON deliveryapp.* TO 'rodrigo'@'localhost';
 
 -- otorgar permisos de lectura, inserción y modificación de datos
 
 use mysql;
-GRANT SELECT, INSERT, UPDATE ON *.* TO 'sofia.gomez'@'localhost';
+GRANT SELECT, INSERT, UPDATE ON deliveryapp.* TO 'sofia.gomez'@'localhost';
